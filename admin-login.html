@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#e0f2fe;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    width:850px;
+    height:500px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.left{
+    width:40%;
+    background:#0f172a;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.left h1{
+    font-size:40px;
+}
+
+.left p{
+    margin-top:10px;
+}
+
+.right{
+    width:60%;
+    padding:60px;
+}
+
+.right h2{
+    margin-bottom:30px;
+    color:#0f172a;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-group input{
+    width:100%;
+    padding:12px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+}
+
+.login-btn{
+    width:100%;
+    padding:14px;
+    background:#ec4899;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.login-btn:hover{
+    background:#db2777;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <div class="left">
+        <h1>SQMS</h1>
+        <p>Admin Portal</p>
+    </div>
+
+    <div class="right">
+
+        <h2>ADMIN LOGIN</h2>
+
+        <div class="input-group">
+            <label>Username</label>
+            <input type="text" id="username">
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password">
+        </div>
+
+        <button class="login-btn" onclick="adminLogin()">
+            LOGIN
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function adminLogin(){
+
+    let username =
+        document.getElementById("username").value;
+
+    let password =
+        document.getElementById("password").value;
+
+    if(username==="admin" && password==="admin123"){
+
+        alert("Login Successful");
+
+        window.location.href="dashboard.html";
+
+    }
+    else{
+
+        alert("Invalid Username or Password");
+
+    }
+}
+
+</script>
+
+</body>
+</html>

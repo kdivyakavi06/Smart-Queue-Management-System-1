@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Queue Management System</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#e0f2fe;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:white;
+    width:700px;
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#0f172a;
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+p{
+    color:#64748b;
+    margin-bottom:40px;
+}
+
+.btn{
+    width:220px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    margin:10px;
+    color:white;
+}
+
+.admin{
+    background:#ec4899;
+}
+
+.user{
+    background:#7c3aed;
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+
+a{
+    text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>SMART QUEUE MANAGEMENT SYSTEM</h1>
+
+    <p>Efficient Queue Handling & Real-Time Monitoring</p>
+
+    <button class="btn admin" onclick="goAdmin()">
+        ADMIN LOGIN
+    </button>
+
+    <br>
+
+    <a href="user-registration.html">
+        <button class="btn user">
+            USER REGISTRATION
+        </button>
+    </a>
+
+</div>
+
+<script>
+
+function goAdmin(){
+    window.location.href="admin-login.html";
+}
+
+</script>
+
+</body>
+</html>
